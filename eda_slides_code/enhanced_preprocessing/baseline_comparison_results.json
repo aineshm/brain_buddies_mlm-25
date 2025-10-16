@@ -1,0 +1,101 @@
+{
+  "summary_statistics": {
+    "total_frames": 3,
+    "original_total_error": "121",
+    "enhanced_total_error": "32",
+    "original_avg_iou": 0.024015871274332894,
+    "enhanced_avg_iou": 0.0023228803716608595,
+    "original_avg_f1": 0.04539479086138895,
+    "enhanced_avg_f1": 0.00461361014994233,
+    "frames_improved": 3
+  },
+  "frame_results": {
+    "0": {
+      "ground_truth": {
+        "count": 13,
+        "mask_count": "4"
+      },
+      "original_method": {
+        "count": "42",
+        "error": "29",
+        "iou": 0.005469872798644329,
+        "precision": 0.0055068457651276295,
+        "recall": 0.448943661971831,
+        "f1_score": 0.010880232111618383
+      },
+      "enhanced_method": {
+        "count": "15",
+        "error": "2",
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0
+      },
+      "improvement": {
+        "count_error_reduction": "27",
+        "iou_improvement": -0.005469872798644329,
+        "precision_improvement": -0.0055068457651276295,
+        "recall_improvement": -0.448943661971831,
+        "f1_improvement": -0.010880232111618383
+      }
+    },
+    "5": {
+      "ground_truth": {
+        "count": 14,
+        "mask_count": "6"
+      },
+      "original_method": {
+        "count": "20",
+        "error": "6",
+        "iou": 0.0019616139082272396,
+        "precision": 0.0019831240035774003,
+        "recall": 0.15315315315315314,
+        "f1_score": 0.003915547024952015
+      },
+      "enhanced_method": {
+        "count": "14",
+        "error": "0",
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0
+      },
+      "improvement": {
+        "count_error_reduction": "6",
+        "iou_improvement": -0.0019616139082272396,
+        "precision_improvement": -0.0019831240035774003,
+        "recall_improvement": -0.15315315315315314,
+        "f1_improvement": -0.003915547024952015
+      }
+    },
+    "26": {
+      "ground_truth": {
+        "count": 87,
+        "mask_count": "18"
+      },
+      "original_method": {
+        "count": "1",
+        "error": "86",
+        "iou": 0.06461612711612712,
+        "precision": 0.06475074404761905,
+        "recall": 0.9688282772056777,
+        "f1_score": 0.12138859344759645
+      },
+      "enhanced_method": {
+        "count": "57",
+        "error": "30",
+        "iou": 0.006968641114982578,
+        "precision": 0.010732904017172647,
+        "recall": 0.019482326746451433,
+        "f1_score": 0.01384083044982699
+      },
+      "improvement": {
+        "count_error_reduction": "56",
+        "iou_improvement": -0.05764748600114454,
+        "precision_improvement": -0.0540178400304464,
+        "recall_improvement": -0.9493459504592262,
+        "f1_improvement": -0.10754776299776946
+      }
+    }
+  }
+}

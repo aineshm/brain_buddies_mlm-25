@@ -1,0 +1,25 @@
+Cell Segmentation Analysis Report
+==================================================
+
+Summary Statistics:
+- Method used: best
+- Frames processed: 11
+- Total cells detected: 2018
+- Average cells per frame: 183.5
+- Average F1 score: 0.063 ± 0.010
+- Average precision: 0.033
+- Average recall: 0.987
+
+Frame-by-Frame Results:
+------------------------------
+Frame 0: 171 cells, F1: 0.052
+Frame 1: 167 cells, F1: 0.063
+Frame 2: 198 cells, F1: 0.053
+Frame 3: 178 cells, F1: 0.065
+Frame 4: 205 cells, F1: 0.047
+Frame 5: 209 cells, F1: 0.071
+Frame 6: 176 cells, F1: 0.058
+Frame 7: 182 cells, F1: 0.063
+Frame 8: 177 cells, F1: 0.073
+Frame 9: 191 cells, F1: 0.081
+... and 1 more frames

@@ -1,0 +1,214 @@
+{
+  "best_method": "multi_scale",
+  "method_scores": {
+    "rolling_ball": 0.0,
+    "adaptive_bg": 2.5,
+    "edge_preserving": 2.8,
+    "morphological": 2.8,
+    "texture_enhanced": 2.75,
+    "multi_scale": 3.05,
+    "combined": 0.0
+  },
+  "detailed_results": {
+    "0": {
+      "rolling_ball": {
+        "original_count": 42,
+        "processed_count": 138,
+        "count_change": 96,
+        "original_small_objects": 24,
+        "processed_small_objects": 70,
+        "noise_reduction": -46,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 125,
+          "improvement": -96
+        }
+      },
+      "adaptive_bg": {
+        "original_count": 42,
+        "processed_count": 15,
+        "count_change": -27,
+        "original_small_objects": 24,
+        "processed_small_objects": 13,
+        "noise_reduction": 11,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 2,
+          "improvement": 27
+        }
+      },
+      "edge_preserving": {
+        "original_count": 42,
+        "processed_count": 1,
+        "count_change": -41,
+        "original_small_objects": 24,
+        "processed_small_objects": 0,
+        "noise_reduction": 24,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 12,
+          "improvement": 17
+        }
+      },
+      "morphological": {
+        "original_count": 42,
+        "processed_count": 1,
+        "count_change": -41,
+        "original_small_objects": 24,
+        "processed_small_objects": 0,
+        "noise_reduction": 24,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 12,
+          "improvement": 17
+        }
+      },
+      "texture_enhanced": {
+        "original_count": 42,
+        "processed_count": 0,
+        "count_change": -42,
+        "original_small_objects": 24,
+        "processed_small_objects": 0.0,
+        "noise_reduction": 24.0,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 13,
+          "improvement": 16
+        }
+      },
+      "multi_scale": {
+        "original_count": 42,
+        "processed_count": 6,
+        "count_change": -36,
+        "original_small_objects": 24,
+        "processed_small_objects": 1,
+        "noise_reduction": 23,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 7,
+          "improvement": 22
+        }
+      },
+      "combined": {
+        "original_count": 42,
+        "processed_count": 121,
+        "count_change": 79,
+        "original_small_objects": 24,
+        "processed_small_objects": 33,
+        "noise_reduction": -9,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 13,
+          "original_error": 29,
+          "processed_error": 108,
+          "improvement": -79
+        }
+      }
+    },
+    "5": {
+      "rolling_ball": {
+        "original_count": 24,
+        "processed_count": 66,
+        "count_change": 42,
+        "original_small_objects": 15,
+        "processed_small_objects": 40,
+        "noise_reduction": -25,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 52,
+          "improvement": -42
+        }
+      },
+      "adaptive_bg": {
+        "original_count": 24,
+        "processed_count": 14,
+        "count_change": -10,
+        "original_small_objects": 15,
+        "processed_small_objects": 13,
+        "noise_reduction": 2,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 0,
+          "improvement": 10
+        }
+      },
+      "edge_preserving": {
+        "original_count": 24,
+        "processed_count": 1,
+        "count_change": -23,
+        "original_small_objects": 15,
+        "processed_small_objects": 0,
+        "noise_reduction": 15,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 13,
+          "improvement": -3
+        }
+      },
+      "morphological": {
+        "original_count": 24,
+        "processed_count": 1,
+        "count_change": -23,
+        "original_small_objects": 15,
+        "processed_small_objects": 0,
+        "noise_reduction": 15,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 13,
+          "improvement": -3
+        }
+      },
+      "texture_enhanced": {
+        "original_count": 24,
+        "processed_count": 0,
+        "count_change": -24,
+        "original_small_objects": 15,
+        "processed_small_objects": 0.0,
+        "noise_reduction": 15.0,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 14,
+          "improvement": -4
+        }
+      },
+      "multi_scale": {
+        "original_count": 24,
+        "processed_count": 6,
+        "count_change": -18,
+        "original_small_objects": 15,
+        "processed_small_objects": 1,
+        "noise_reduction": 14,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 8,
+          "improvement": 2
+        }
+      },
+      "combined": {
+        "original_count": 24,
+        "processed_count": 100,
+        "count_change": 76,
+        "original_small_objects": 15,
+        "processed_small_objects": 25,
+        "noise_reduction": -10,
+        "ground_truth_evaluation": {
+          "ground_truth_count": 14,
+          "original_error": 10,
+          "processed_error": 86,
+          "improvement": -76
+        }
+      }
+    }
+  }
+}

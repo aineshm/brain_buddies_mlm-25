@@ -1,0 +1,830 @@
+{
+  "results": {
+    "0": {
+      "original": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "42",
+            "ground_truth_count": 13,
+            "absolute_error": "29",
+            "relative_error": 2.230769230769231,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "3",
+            "ground_truth_count": 13,
+            "absolute_error": "10",
+            "relative_error": 0.7692307692307693,
+            "accuracy": 0.23076923076923073
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "140",
+            "ground_truth_count": 13,
+            "absolute_error": "127",
+            "relative_error": 9.76923076923077,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "39",
+            "ground_truth_count": 13,
+            "absolute_error": "26",
+            "relative_error": 2.0,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "1",
+            "ground_truth_count": 13,
+            "absolute_error": "12",
+            "relative_error": 0.9230769230769231,
+            "accuracy": 0.07692307692307687
+          }
+        }
+      },
+      "adaptive_bg": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "15",
+            "ground_truth_count": 13,
+            "absolute_error": "2",
+            "relative_error": 0.15384615384615385,
+            "accuracy": 0.8461538461538461
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "145",
+            "ground_truth_count": 13,
+            "absolute_error": "132",
+            "relative_error": 10.153846153846153,
+            "accuracy": 0.0
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "254",
+            "ground_truth_count": 13,
+            "absolute_error": "241",
+            "relative_error": 18.53846153846154,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "multi_scale": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "6",
+            "ground_truth_count": 13,
+            "absolute_error": "7",
+            "relative_error": 0.5384615384615384,
+            "accuracy": 0.46153846153846156
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "93",
+            "ground_truth_count": 13,
+            "absolute_error": "80",
+            "relative_error": 6.153846153846154,
+            "accuracy": 0.0
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "106",
+            "ground_truth_count": 13,
+            "absolute_error": "93",
+            "relative_error": 7.153846153846154,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "6",
+            "ground_truth_count": 13,
+            "absolute_error": "7",
+            "relative_error": 0.5384615384615384,
+            "accuracy": 0.46153846153846156
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "combined": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "207",
+            "ground_truth_count": 13,
+            "absolute_error": "194",
+            "relative_error": 14.923076923076923,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "304",
+            "ground_truth_count": 13,
+            "absolute_error": "291",
+            "relative_error": 22.384615384615383,
+            "accuracy": 0.0
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "329",
+            "ground_truth_count": 13,
+            "absolute_error": "316",
+            "relative_error": 24.307692307692307,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "6",
+            "ground_truth_count": 13,
+            "absolute_error": "7",
+            "relative_error": 0.5384615384615384,
+            "accuracy": 0.46153846153846156
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 13,
+            "absolute_error": "13",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      }
+    },
+    "5": {
+      "original": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "20",
+            "ground_truth_count": 14,
+            "absolute_error": "6",
+            "relative_error": 0.42857142857142855,
+            "accuracy": 0.5714285714285714
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "4",
+            "ground_truth_count": 14,
+            "absolute_error": "10",
+            "relative_error": 0.7142857142857143,
+            "accuracy": 0.2857142857142857
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "9",
+            "ground_truth_count": 14,
+            "absolute_error": "5",
+            "relative_error": 0.35714285714285715,
+            "accuracy": 0.6428571428571428
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "55",
+            "ground_truth_count": 14,
+            "absolute_error": "41",
+            "relative_error": 2.9285714285714284,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "2",
+            "ground_truth_count": 14,
+            "absolute_error": "12",
+            "relative_error": 0.8571428571428571,
+            "accuracy": 0.1428571428571429
+          }
+        }
+      },
+      "adaptive_bg": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "14",
+            "ground_truth_count": 14,
+            "absolute_error": "0",
+            "relative_error": 0.0,
+            "accuracy": 1.0
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "144",
+            "ground_truth_count": 14,
+            "absolute_error": "130",
+            "relative_error": 9.285714285714286,
+            "accuracy": 0.0
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "224",
+            "ground_truth_count": 14,
+            "absolute_error": "210",
+            "relative_error": 15.0,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "multi_scale": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "6",
+            "ground_truth_count": 14,
+            "absolute_error": "8",
+            "relative_error": 0.5714285714285714,
+            "accuracy": 0.4285714285714286
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "27",
+            "ground_truth_count": 14,
+            "absolute_error": "13",
+            "relative_error": 0.9285714285714286,
+            "accuracy": 0.0714285714285714
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "12",
+            "ground_truth_count": 14,
+            "absolute_error": "2",
+            "relative_error": 0.14285714285714285,
+            "accuracy": 0.8571428571428572
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "3",
+            "ground_truth_count": 14,
+            "absolute_error": "11",
+            "relative_error": 0.7857142857142857,
+            "accuracy": 0.2142857142857143
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "combined": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "192",
+            "ground_truth_count": 14,
+            "absolute_error": "178",
+            "relative_error": 12.714285714285714,
+            "accuracy": 0.0
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "289",
+            "ground_truth_count": 14,
+            "absolute_error": "275",
+            "relative_error": 19.642857142857142,
+            "accuracy": 0.0
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "333",
+            "ground_truth_count": 14,
+            "absolute_error": "319",
+            "relative_error": 22.785714285714285,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "5",
+            "ground_truth_count": 14,
+            "absolute_error": "9",
+            "relative_error": 0.6428571428571429,
+            "accuracy": 0.3571428571428571
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 14,
+            "absolute_error": "14",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      }
+    },
+    "26": {
+      "original": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "1",
+            "ground_truth_count": 87,
+            "absolute_error": "86",
+            "relative_error": 0.9885057471264368,
+            "accuracy": 0.011494252873563204
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "5",
+            "ground_truth_count": 87,
+            "absolute_error": "82",
+            "relative_error": 0.9425287356321839,
+            "accuracy": 0.05747126436781613
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "49",
+            "ground_truth_count": 87,
+            "absolute_error": "38",
+            "relative_error": 0.4367816091954023,
+            "accuracy": 0.5632183908045977
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "1",
+            "ground_truth_count": 87,
+            "absolute_error": "86",
+            "relative_error": 0.9885057471264368,
+            "accuracy": 0.011494252873563204
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "10",
+            "ground_truth_count": 87,
+            "absolute_error": "77",
+            "relative_error": 0.8850574712643678,
+            "accuracy": 0.11494252873563215
+          }
+        }
+      },
+      "adaptive_bg": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "57",
+            "ground_truth_count": 87,
+            "absolute_error": "30",
+            "relative_error": 0.3448275862068966,
+            "accuracy": 0.6551724137931034
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "109",
+            "ground_truth_count": 87,
+            "absolute_error": "22",
+            "relative_error": 0.25287356321839083,
+            "accuracy": 0.7471264367816092
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "185",
+            "ground_truth_count": 87,
+            "absolute_error": "98",
+            "relative_error": 1.1264367816091954,
+            "accuracy": 0.0
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "16",
+            "ground_truth_count": 87,
+            "absolute_error": "71",
+            "relative_error": 0.8160919540229885,
+            "accuracy": 0.1839080459770115
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "2",
+            "ground_truth_count": 87,
+            "absolute_error": "85",
+            "relative_error": 0.9770114942528736,
+            "accuracy": 0.02298850574712641
+          }
+        }
+      },
+      "multi_scale": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "49",
+            "ground_truth_count": 87,
+            "absolute_error": "38",
+            "relative_error": 0.4367816091954023,
+            "accuracy": 0.5632183908045977
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "52",
+            "ground_truth_count": 87,
+            "absolute_error": "35",
+            "relative_error": 0.40229885057471265,
+            "accuracy": 0.5977011494252873
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "80",
+            "ground_truth_count": 87,
+            "absolute_error": "7",
+            "relative_error": 0.08045977011494253,
+            "accuracy": 0.9195402298850575
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "21",
+            "ground_truth_count": 87,
+            "absolute_error": "66",
+            "relative_error": 0.7586206896551724,
+            "accuracy": 0.24137931034482762
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      },
+      "combined": {
+        "threshold": {
+          "evaluation": {
+            "predicted_count": "75",
+            "ground_truth_count": 87,
+            "absolute_error": "12",
+            "relative_error": 0.13793103448275862,
+            "accuracy": 0.8620689655172413
+          }
+        },
+        "adaptive_threshold": {
+          "evaluation": {
+            "predicted_count": "44",
+            "ground_truth_count": 87,
+            "absolute_error": "43",
+            "relative_error": 0.4942528735632184,
+            "accuracy": 0.5057471264367817
+          }
+        },
+        "edge_based": {
+          "evaluation": {
+            "predicted_count": "128",
+            "ground_truth_count": 87,
+            "absolute_error": "41",
+            "relative_error": 0.47126436781609193,
+            "accuracy": 0.5287356321839081
+          }
+        },
+        "watershed": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        },
+        "morphological": {
+          "evaluation": {
+            "predicted_count": "15",
+            "ground_truth_count": 87,
+            "absolute_error": "72",
+            "relative_error": 0.8275862068965517,
+            "accuracy": 0.1724137931034483
+          }
+        },
+        "adaptive_morphological": {
+          "evaluation": {
+            "predicted_count": "0",
+            "ground_truth_count": 87,
+            "absolute_error": "87",
+            "relative_error": 1.0,
+            "accuracy": 0.0
+          }
+        }
+      }
+    }
+  },
+  "best_combinations": {
+    "best_overall": {
+      "frame": 5,
+      "preprocessing": "adaptive_bg",
+      "segmentation": "threshold",
+      "accuracy": 1.0,
+      "error": "0",
+      "predicted": "14",
+      "ground_truth": 14
+    },
+    "best_per_frame": {
+      "0": {
+        "frame": 0,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "threshold",
+        "accuracy": 0.8461538461538461,
+        "error": "2",
+        "predicted": "15",
+        "ground_truth": 13
+      },
+      "5": {
+        "frame": 5,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "threshold",
+        "accuracy": 1.0,
+        "error": "0",
+        "predicted": "14",
+        "ground_truth": 14
+      },
+      "26": {
+        "frame": 26,
+        "preprocessing": "multi_scale",
+        "segmentation": "edge_based",
+        "accuracy": 0.9195402298850575,
+        "error": "7",
+        "predicted": "80",
+        "ground_truth": 87
+      }
+    },
+    "best_preprocessing": "multi_scale",
+    "best_segmentation": "threshold",
+    "preprocessing_scores": {
+      "adaptive_bg": 0.1919638471362609,
+      "multi_scale": 0.26757469860918137,
+      "combined": 0.1604248242179277,
+      "original": 0.15050945223359014
+    },
+    "segmentation_scores": {
+      "threshold": 0.44997052755673445,
+      "edge_based": 0.2926245210727969,
+      "adaptive_threshold": 0.2079965054102985,
+      "morphological": 0.17530840806702877,
+      "adaptive_morphological": 0.029809271188581527,
+      "watershed": 0.0
+    },
+    "all_combinations": [
+      {
+        "frame": 5,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "threshold",
+        "accuracy": 1.0,
+        "error": "0",
+        "predicted": "14",
+        "ground_truth": 14
+      },
+      {
+        "frame": 26,
+        "preprocessing": "multi_scale",
+        "segmentation": "edge_based",
+        "accuracy": 0.9195402298850575,
+        "error": "7",
+        "predicted": "80",
+        "ground_truth": 87
+      },
+      {
+        "frame": 26,
+        "preprocessing": "combined",
+        "segmentation": "threshold",
+        "accuracy": 0.8620689655172413,
+        "error": "12",
+        "predicted": "75",
+        "ground_truth": 87
+      },
+      {
+        "frame": 5,
+        "preprocessing": "multi_scale",
+        "segmentation": "edge_based",
+        "accuracy": 0.8571428571428572,
+        "error": "2",
+        "predicted": "12",
+        "ground_truth": 14
+      },
+      {
+        "frame": 0,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "threshold",
+        "accuracy": 0.8461538461538461,
+        "error": "2",
+        "predicted": "15",
+        "ground_truth": 13
+      },
+      {
+        "frame": 26,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "adaptive_threshold",
+        "accuracy": 0.7471264367816092,
+        "error": "22",
+        "predicted": "109",
+        "ground_truth": 87
+      },
+      {
+        "frame": 26,
+        "preprocessing": "adaptive_bg",
+        "segmentation": "threshold",
+        "accuracy": 0.6551724137931034,
+        "error": "30",
+        "predicted": "57",
+        "ground_truth": 87
+      },
+      {
+        "frame": 5,
+        "preprocessing": "original",
+        "segmentation": "edge_based",
+        "accuracy": 0.6428571428571428,
+        "error": "5",
+        "predicted": "9",
+        "ground_truth": 14
+      },
+      {
+        "frame": 26,
+        "preprocessing": "multi_scale",
+        "segmentation": "adaptive_threshold",
+        "accuracy": 0.5977011494252873,
+        "error": "35",
+        "predicted": "52",
+        "ground_truth": 87
+      },
+      {
+        "frame": 5,
+        "preprocessing": "original",
+        "segmentation": "threshold",
+        "accuracy": 0.5714285714285714,
+        "error": "6",
+        "predicted": "20",
+        "ground_truth": 14
+      }
+    ]
+  }
+}

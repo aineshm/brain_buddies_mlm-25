@@ -1,0 +1,66 @@
+TIF Annotation Summary Report
+==================================================
+
+Dataset Overview:
+- Source TIF: annotated_data_1001/MattLines1.tif
+- Source XML: annotated_data_1001/MattLines1annotations.xml
+- TIF dimensions: (41, 242, 244)
+- Total shapes: 1798
+- Total frames with annotations: 29
+- Shape types: ellipse, polyline, polygon
+- Unique labels: hyphae, psuedohyphae, single dispersed cell, clump dispersed cell, planktonic, biofilm, yeast form
+
+Shape Type Breakdown:
+- ellipse: 1132 (63.0%)
+- polyline: 544 (30.3%)
+- polygon: 122 (6.8%)
+
+Label Breakdown:
+- planktonic: 518 (28.8%)
+- hyphae: 544 (30.3%)
+- biofilm: 122 (6.8%)
+- single dispersed cell: 614 (34.1%)
+
+Frame-by-Frame Analysis:
+
+Frame 0: 13 visible shapes
+  Types: {'ellipse': 13}
+  Labels: {'planktonic': 13}
+
+Frame 1: 15 visible shapes
+  Types: {'ellipse': 15}
+  Labels: {'planktonic': 15}
+
+Frame 2: 13 visible shapes
+  Types: {'ellipse': 13}
+  Labels: {'planktonic': 13}
+
+Frame 3: 13 visible shapes
+  Types: {'ellipse': 13}
+  Labels: {'planktonic': 13}
+
+Frame 4: 14 visible shapes
+  Types: {'ellipse': 11, 'polyline': 3}
+  Labels: {'planktonic': 11, 'hyphae': 3}
+
+Frame 5: 15 visible shapes
+  Types: {'ellipse': 14, 'polyline': 1}
+  Labels: {'planktonic': 14, 'hyphae': 1}
+
+Frame 6: 16 visible shapes
+  Types: {'ellipse': 12, 'polyline': 4}
+  Labels: {'planktonic': 12, 'hyphae': 4}
+
+Frame 7: 18 visible shapes
+  Types: {'ellipse': 13, 'polyline': 5}
+  Labels: {'planktonic': 13, 'hyphae': 5}
+
+Frame 8: 22 visible shapes
+  Types: {'ellipse': 13, 'polyline': 9}
+  Labels: {'planktonic': 13, 'hyphae': 9}
+
+Frame 9: 24 visible shapes
+  Types: {'ellipse': 14, 'polyline': 10}
+  Labels: {'planktonic': 14, 'hyphae': 10}
+
+... and 19 more frames

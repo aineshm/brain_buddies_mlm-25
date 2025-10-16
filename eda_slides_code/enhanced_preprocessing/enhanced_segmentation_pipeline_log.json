@@ -1,0 +1,1281 @@
+{
+  "session_info": {
+    "start_time": "2025-10-01 19:40:46",
+    "end_time": "2025-10-01 19:40:50",
+    "tif_file": "../annotated_data_1001/MattLines1.tif",
+    "xml_file": "../annotated_data_1001/MattLines1annotations.xml",
+    "tif_shape": [
+      41,
+      242,
+      244
+    ]
+  },
+  "log_entries": [
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Loading TIF file",
+      "details": "Path: ../annotated_data_1001/MattLines1.tif",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "NumPy compatibility issue",
+      "details": "Using PIL fallback for TIF loading",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "TIF loaded successfully",
+      "details": "Shape: (41, 242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Loading annotations",
+      "details": "Path: ../annotated_data_1001/MattLines1annotations.xml",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Annotations loaded",
+      "details": "29 frames, 1798 total shapes",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Starting comprehensive analysis",
+      "details": "Testing frames: [0, 5, 26]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Analyzing frame 0",
+      "details": "Frame shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Starting combined preprocessing",
+      "details": "Original image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying adaptive background subtraction",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Adaptive background subtraction complete",
+      "details": "Kernel size: 31",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Combined preprocessing complete",
+      "details": "Generated 4 processed versions",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Processing original version",
+      "details": "Frame 0",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 42, Time: 0.011s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 3, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:46",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 140, Time: 0.019s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 39, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 1, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing adaptive_bg version",
+      "details": "Frame 0",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 15, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 145, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 254, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 0, Time: 0.007s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.017s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing multi_scale version",
+      "details": "Frame 0",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 6, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 93, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 106, Time: 0.005s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 6, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.017s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing combined version",
+      "details": "Frame 0",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 207, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 304, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 329, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 6, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.017s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Frame 0 analysis complete",
+      "details": "Tested 4 preprocessing \u00d7 6 segmentation methods",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Analyzing frame 5",
+      "details": "Frame shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Starting combined preprocessing",
+      "details": "Original image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive background subtraction",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Adaptive background subtraction complete",
+      "details": "Kernel size: 31",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Combined preprocessing complete",
+      "details": "Generated 4 processed versions",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing original version",
+      "details": "Frame 5",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 20, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 4, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 9, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 55, Time: 0.007s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 2, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing adaptive_bg version",
+      "details": "Frame 5",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 14, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 144, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 224, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 0, Time: 0.007s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing multi_scale version",
+      "details": "Frame 5",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 6, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 27, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 12, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 3, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Processing combined version",
+      "details": "Frame 5",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 192, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 289, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 333, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 5, Time: 0.007s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Frame 5 analysis complete",
+      "details": "Tested 4 preprocessing \u00d7 6 segmentation methods",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Analyzing frame 26",
+      "details": "Frame shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Starting combined preprocessing",
+      "details": "Original image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:47",
+      "action": "Applying adaptive background subtraction",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Adaptive background subtraction complete",
+      "details": "Kernel size: 31",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying multi-scale enhancement",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Multi-scale enhancement complete",
+      "details": "Scales used: [1, 2, 4]",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Combined preprocessing complete",
+      "details": "Generated 4 processed versions",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Processing original version",
+      "details": "Frame 26",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 1, Time: 0.002s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 5, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 49, Time: 0.005s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 1, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 10, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Processing adaptive_bg version",
+      "details": "Frame 26",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 57, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 109, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 185, Time: 0.005s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 16, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 2, Time: 0.018s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Processing multi_scale version",
+      "details": "Frame 26",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 49, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 52, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 80, Time: 0.004s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 21, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.017s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Processing combined version",
+      "details": "Frame 26",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Running all segmentation methods",
+      "details": "Image shape: (242, 244)",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying threshold-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: threshold",
+      "details": "Objects: 75, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive threshold segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_threshold",
+      "details": "Objects: 44, Time: 0.003s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying edge-based segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: edge_based",
+      "details": "Objects: 128, Time: 0.005s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying watershed segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Error in watershed",
+      "details": "No skimage.feature attribute peak_local_maxima",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: morphological",
+      "details": "Objects: 15, Time: 0.006s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Applying adaptive morphological segmentation",
+      "details": "Min size: 15",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Segmentation method: adaptive_morphological",
+      "details": "Objects: 0, Time: 0.017s",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Frame 26 analysis complete",
+      "details": "Tested 4 preprocessing \u00d7 6 segmentation methods",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Comprehensive analysis complete",
+      "details": "Analyzed 3 frames",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Finding best method combinations",
+      "details": "Analyzing all results",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:48",
+      "action": "Best combinations identified",
+      "details": "Best overall: multi_scale + threshold",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:49",
+      "action": "Visualization saved",
+      "details": "enhanced_pipeline_frame_0.png",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:49",
+      "action": "Visualization saved",
+      "details": "enhanced_pipeline_frame_5.png",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:50",
+      "action": "Visualization saved",
+      "details": "enhanced_pipeline_frame_26.png",
+      "result": ""
+    },
+    {
+      "timestamp": "2025-10-01 19:40:50",
+      "action": "Results saved",
+      "details": "enhanced_pipeline_results.json",
+      "result": ""
+    }
+  ]
+}

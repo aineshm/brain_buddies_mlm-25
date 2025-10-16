@@ -1,0 +1,68 @@
+Shapes for Frame 0
+==============================
+
+Shape 1: ellipse - planktonic
+  Center: (188.58, 50.33)
+  Radii: (4.01, 3.23)
+  Occluded: False, Outside: False
+
+Shape 2: ellipse - planktonic
+  Center: (181.0, 49.89)
+  Radii: (3.57, 3.46)
+  Occluded: False, Outside: False
+
+Shape 3: ellipse - planktonic
+  Center: (222.99, 48.6)
+  Radii: (3.71, 3.54)
+  Occluded: False, Outside: False
+
+Shape 4: ellipse - planktonic
+  Center: (228.56, 43.36)
+  Radii: (3.88, 3.71)
+  Occluded: False, Outside: False
+
+Shape 5: ellipse - planktonic
+  Center: (235.31, 38.64)
+  Radii: (4.22, 4.39)
+  Occluded: False, Outside: False
+
+Shape 6: ellipse - planktonic
+  Center: (197.17, 199.82)
+  Radii: (3.54, 3.21)
+  Occluded: False, Outside: False
+
+Shape 7: ellipse - planktonic
+  Center: (195.14, 193.24)
+  Radii: (4.22, 4.39)
+  Occluded: False, Outside: False
+
+Shape 8: ellipse - planktonic
+  Center: (199.53, 185.98)
+  Radii: (3.54, 4.56)
+  Occluded: False, Outside: False
+
+Shape 9: ellipse - planktonic
+  Center: (204.42, 180.92)
+  Radii: (3.04, 3.21)
+  Occluded: False, Outside: False
+
+Shape 10: ellipse - planktonic
+  Center: (28.56, 229.02)
+  Radii: (3.38, 3.04)
+  Occluded: False, Outside: False
+
+Shape 11: ellipse - planktonic
+  Center: (20.96, 226.49)
+  Radii: (5.23, 2.87)
+  Occluded: False, Outside: False
+
+Shape 12: ellipse - planktonic
+  Center: (15.73, 221.93)
+  Radii: (4.05, 4.39)
+  Occluded: False, Outside: False
+
+Shape 13: ellipse - planktonic
+  Center: (16.57, 229.86)
+  Radii: (3.54, 3.54)
+  Occluded: False, Outside: False
+
