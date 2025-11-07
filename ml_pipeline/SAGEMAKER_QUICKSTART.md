@@ -125,6 +125,34 @@ aws sagemaker describe-training-job --training-job-name $JOB_NAME | grep Trainin
 
 ---
 
+## 🔍 Visualize Preprocessing (Optional)
+
+Before or after training, you can visualize what preprocessing steps are applied to your images:
+
+```bash
+cd scripts/utils
+
+# Generate preprocessing examples
+python3 visualize_preprocessing.py \
+    --dataset ../../data/processed/yolo_dataset/dataset.yaml \
+    --output ../../results/preprocessing_examples \
+    --num-samples 10
+
+# Upload examples to S3 (optional)
+aws s3 sync ../../results/preprocessing_examples s3://my-bucket-name/preprocessing-examples/
+```
+
+**This creates:**
+- Side-by-side comparison images (original vs preprocessed)
+- README.md documenting all 5 preprocessing steps:
+  1. Resize & Padding (LetterBox)
+  2. HSV Augmentation (brightness ±40%)
+  3. Geometric Transforms (rotation, flip, scale, shear)
+  4. Advanced Augmentation (Mosaic, MixUp, Copy-Paste)
+  5. Normalization to [0, 1] range
+
+---
+
 ## 📥 Download Trained Model
 
 ### After Training Completes (~15-20 hours)
