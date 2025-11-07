@@ -95,16 +95,18 @@ def train():
     data_config['train'] = 'images/train'  # Relative to path
     data_config['val'] = 'images/val'      # Relative to path
 
-    # Save updated config
+    # Save updated config with proper formatting
     updated_yaml = Path(args.data_dir) / 'dataset_sagemaker.yaml'
     with open(updated_yaml, 'w') as f:
-        yaml.dump(data_config, f)
+        yaml.dump(data_config, f, default_flow_style=False, sort_keys=False)
 
     print(f"Updated dataset config saved to: {updated_yaml}")
-    print(f"Dataset paths:")
+    print(f"\nDataset configuration:")
     print(f"  path (absolute): {data_config['path']}")
     print(f"  train (relative): {data_config['train']}")
     print(f"  val (relative): {data_config['val']}")
+    print(f"  nc (classes): {data_config.get('nc', 'NOT FOUND!')}")
+    print(f"  names: {data_config.get('names', 'NOT FOUND!')}")
 
     # Verify the full paths exist
     train_path = base_path / data_config['train']
@@ -114,11 +116,25 @@ def train():
     print(f"  Validation: {val_path} -> {'EXISTS' if val_path.exists() else 'MISSING'}")
 
     if train_path.exists():
-        train_images = list(train_path.glob('*.tif'))
+        # Check for all common image formats
+        train_images = list(train_path.glob('*.tif')) + list(train_path.glob('*.tiff')) + \
+                      list(train_path.glob('*.png')) + list(train_path.glob('*.jpg'))
         print(f"  Found {len(train_images)} training images")
+        if len(train_images) > 0:
+            print(f"    Sample: {train_images[0].name}")
+    else:
+        # List what IS in the directory
+        print(f"  ERROR: Training path does not exist!")
+        print(f"  Contents of {args.data_dir}:")
+        for item in Path(args.data_dir).iterdir():
+            print(f"    - {item.name} ({'dir' if item.is_dir() else 'file'})")
+
     if val_path.exists():
-        val_images = list(val_path.glob('*.tif'))
+        val_images = list(val_path.glob('*.tif')) + list(val_path.glob('*.tiff')) + \
+                    list(val_path.glob('*.png')) + list(val_path.glob('*.jpg'))
         print(f"  Found {len(val_images)} validation images")
+        if len(val_images) > 0:
+            print(f"    Sample: {val_images[0].name}")
     print()
 
     # Initialize model

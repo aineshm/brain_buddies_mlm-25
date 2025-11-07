@@ -1,8 +1,8 @@
-Job Name: pytorch-training-2025-11-07-02-37-55-006
+Job Name: pytorch-training-2025-11-07-23-29-10-343
 Region: us-east-2
-Output S3: s3://mlm-training-data/sagemaker-output//pytorch-training-2025-11-07-02-37-55-006/
+Output S3: s3://mlm-training-data/sagemaker-output//pytorch-training-2025-11-07-23-29-10-343/
 
 Commands:
-Monitor: aws logs tail /aws/sagemaker/TrainingJobs/pytorch-training-2025-11-07-02-37-55-006 --follow
-Status: aws sagemaker describe-training-job --training-job-name pytorch-training-2025-11-07-02-37-55-006
-Download: aws s3 sync s3://mlm-training-data/sagemaker-output//pytorch-training-2025-11-07-02-37-55-006/output/ ./trained_models/
+Monitor: aws logs tail /aws/sagemaker/TrainingJobs/pytorch-training-2025-11-07-23-29-10-343 --follow
+Status: aws sagemaker describe-training-job --training-job-name pytorch-training-2025-11-07-23-29-10-343
+Download: aws s3 sync s3://mlm-training-data/sagemaker-output//pytorch-training-2025-11-07-23-29-10-343/output/ ./trained_models/
