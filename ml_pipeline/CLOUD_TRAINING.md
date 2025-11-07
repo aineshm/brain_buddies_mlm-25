@@ -12,7 +12,7 @@ This guide covers:
 3. Running training on GPU instances
 4. Downloading trained models
 
-**Estimated Cost**: $2-5 for 20 hours of training (ml.g4dn.xlarge)
+**Estimated Cost**: $2-5 for 20 hours of training (ml.g4dn.2xlarge)
 
 ---
 
@@ -128,7 +128,7 @@ estimator = PyTorch(
     entry_point='train_entry.py',
     source_dir='ml_pipeline',
     role=role,
-    instance_type='ml.g4dn.xlarge',  # GPU instance (~$0.70/hr)
+    instance_type='ml.g4dn.2xlarge',  # GPU instance (~$0.70/hr)
     instance_count=1,
     framework_version='2.0.0',
     py_version='py310',
@@ -314,7 +314,7 @@ import argparse
 def launch_training(
     data_s3_path: str,
     output_s3_path: str,
-    instance_type: str = 'ml.g4dn.xlarge',
+    instance_type: str = 'ml.g4dn.2xlarge',
     model_size: str = 's',
     epochs: int = 150,
     batch_size: int = 8
@@ -386,7 +386,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Launch SageMaker training')
     parser.add_argument('--data-s3', required=True, help='S3 path to data')
     parser.add_argument('--output-s3', required=True, help='S3 path for output')
-    parser.add_argument('--instance', default='ml.g4dn.xlarge', help='Instance type')
+    parser.add_argument('--instance', default='ml.g4dn.2xlarge', help='Instance type')
     parser.add_argument('--model', default='s', choices=['n', 's', 'm', 'l', 'x'])
     parser.add_argument('--epochs', type=int, default=150)
     parser.add_argument('--batch-size', type=int, default=8)
@@ -451,7 +451,7 @@ cd ml_pipeline
 python3 launch_sagemaker.py \
     --data-s3 s3://$BUCKET/mlm-data/ \
     --output-s3 s3://$BUCKET/sagemaker-output/ \
-    --instance ml.g4dn.xlarge \
+    --instance ml.g4dn.2xlarge \
     --model s \
     --epochs 150 \
     --batch-size 8
@@ -492,11 +492,11 @@ ls -lh best.pt
 
 | Instance | GPU | vCPU | RAM | Cost/hr | 20hr Cost |
 |----------|-----|------|-----|---------|-----------|
-| ml.g4dn.xlarge | T4 (16GB) | 4 | 16GB | $0.736 | $14.72 |
+| ml.g4dn.2xlarge | T4 (16GB) | 4 | 16GB | $0.736 | $14.72 |
 | ml.g4dn.2xlarge | T4 (16GB) | 8 | 32GB | $0.94 | $18.80 |
 | ml.p3.2xlarge | V100 (16GB) | 8 | 61GB | $3.82 | $76.40 |
 
-**Recommendation**: `ml.g4dn.xlarge` (best value)
+**Recommendation**: `ml.g4dn.2xlarge` (best value)
 
 ### Cost Savings
 
@@ -600,7 +600,7 @@ aws s3 sync data/processed/yolo_dataset s3://$BUCKET/mlm-data/yolo_dataset/
 python3 launch_sagemaker.py \
     --data-s3 s3://$BUCKET/mlm-data/ \
     --output-s3 s3://$BUCKET/output/ \
-    --instance ml.g4dn.xlarge \
+    --instance ml.g4dn.2xlarge \
     --model s \
     --epochs 150
 

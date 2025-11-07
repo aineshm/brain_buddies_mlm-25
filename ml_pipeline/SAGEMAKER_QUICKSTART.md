@@ -159,15 +159,14 @@ python3 inference_pipeline.py \
 
 ## 💰 Cost Estimate
 
-| Instance | GPU | Cost/hr | 20hr | Spot (~70% off) |
-|----------|-----|---------|------|-----------------|
-| ml.g4dn.xlarge | T4 16GB | $0.736 | $14.72 | **$4.42** |
-| ml.g4dn.2xlarge | T4 16GB | $0.94 | $18.80 | **$5.64** |
+| Instance | GPU | Cost/hr | 20hr On-Demand | Spot (~70% off) |
+|----------|-----|---------|----------------|-----------------|
+| ml.g4dn.2xlarge | T4 16GB | $0.94 | **$18.80** | $5.64 |
 | ml.p3.2xlarge | V100 16GB | $3.82 | $76.40 | $22.92 |
 
-**Recommended**: ml.g4dn.xlarge with spot = **~$5 total** 🎉
+**Recommended**: ml.g4dn.2xlarge on-demand = **~$19 total** for 20 hours
 
-Our script uses spot instances by default!
+**Note**: Our script now uses **on-demand** instances by default (not spot) because most AWS accounts don't have spot instance quota by default. You can enable spot instances with `--spot` flag if you have quota approved (saves ~70%).
 
 ---
 
@@ -216,6 +215,36 @@ aws logs tail /aws/sagemaker/TrainingJobs/$JOB_NAME
 # - Data not in S3 (run upload_to_s3.sh)
 # - Wrong S3 path (check s3://bucket/mlm-data/yolo_dataset/)
 # - Insufficient quota (request limit increase in AWS console)
+```
+
+### "AttributeError" or "DataLoader worker process" Error
+
+This error means the training script can't find the images. **Fixed in latest version** - the script now uses absolute paths. Make sure you're using the latest `train_sagemaker.py`.
+
+If you still see this error:
+1. Check that data uploaded correctly: `aws s3 ls s3://your-bucket/mlm-data/yolo_dataset/images/train/`
+2. Re-upload data: `./upload_to_s3.sh your-bucket`
+3. Make sure you pulled latest code: `git pull origin main`
+
+### "ResourceLimitExceeded" for Spot Instances
+
+**Error**: `The account-level service limit 'ml.g4dn.2xlarge for spot training job usage' is 0`
+
+**Solution**: Our script now uses on-demand instances by default (no `--spot` flag needed).
+
+**What are spot instances?**
+- **Spot instances**: 70% cheaper but can be interrupted if AWS needs capacity
+- **On-demand instances**: Full price but guaranteed to complete
+- Most new AWS accounts have 0 quota for GPU spot instances
+- You can request spot quota increase if you want to save costs (takes 1-2 days)
+
+**To use spot instances** (if you have quota):
+```bash
+python3 launch_sagemaker.py \
+    --data-s3 s3://bucket/mlm-data/ \
+    --output-s3 s3://bucket/output/ \
+    --role arn:aws:iam::ACCOUNT:role/SageMakerExecutionRole \
+    --spot  # Add this flag
 ```
 
 ### CUDA Out of Memory

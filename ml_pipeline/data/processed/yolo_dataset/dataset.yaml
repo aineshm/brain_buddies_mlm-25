@@ -1,0 +1,30 @@
+# Candida albicans Morphology Dataset
+# Generated for YOLOv8 instance segmentation training
+
+# Paths (relative to this file)
+path: /Users/aineshmohan/Library/Mobile Documents/com~apple~CloudDocs/College/MLM 25/brain_buddies_mlm-25/ml_pipeline/scripts/data_prep/../../data/processed/yolo_dataset
+train: images/train
+val: images/val
+
+# Number of classes
+nc: 7
+
+# Class names
+names:
+  0: single dispersed cell
+  1: clump dispersed cell
+  2: planktonic
+  3: yeast form
+  4: psuedohyphae
+  5: hyphae
+  6: biofilm
+
+# Dataset statistics
+# Training images: 87
+# Validation images: 6
+# Total images: 93
+
+# Cell morphology categories:
+# - Dispersed cells: single, clump, planktonic
+# - Biofilm-associated: yeast form, pseudohyphae, hyphae
+# - Biofilm regions: biofilm polygons

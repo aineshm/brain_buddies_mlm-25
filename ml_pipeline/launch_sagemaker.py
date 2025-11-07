@@ -33,8 +33,14 @@ def check_aws_credentials():
         return False
 
 
-def get_or_create_role(role_name='SageMakerExecutionRole'):
+def get_or_create_role(role_arn=None):
     """Get or create SageMaker execution role."""
+    # If role ARN explicitly provided, use it
+    if role_arn:
+        print(f"✓ Using provided role: {role_arn}")
+        return role_arn
+
+    # Try to get execution role (works when running inside SageMaker)
     try:
         session = sagemaker.Session()
         role = sagemaker.get_execution_role()
@@ -42,20 +48,21 @@ def get_or_create_role(role_name='SageMakerExecutionRole'):
         return role
     except Exception:
         print(f"⚠️  No execution role found")
-        print(f"  Please create a SageMaker execution role in the AWS console")
-        print(f"  or run this script from within SageMaker")
+        print(f"  Please create a SageMaker execution role and pass it with --role")
+        print(f"  Example: --role arn:aws:iam::032552343956:role/SageMakerExecutionRole")
         return None
 
 
 def launch_training(
     data_s3_path: str,
     output_s3_path: str,
-    instance_type: str = 'ml.g4dn.xlarge',
+    instance_type: str = 'ml.g4dn.2xlarge',
     model_size: str = 's',
     epochs: int = 150,
     batch_size: int = 8,
-    use_spot: bool = True,
-    wait: bool = False
+    use_spot: bool = False,
+    wait: bool = False,
+    role_arn: str = None
 ):
     """Launch SageMaker training job."""
 
@@ -77,7 +84,7 @@ def launch_training(
         sys.exit(1)
 
     # Get execution role
-    role = get_or_create_role()
+    role = get_or_create_role(role_arn)
     if role is None:
         sys.exit(1)
 
@@ -245,8 +252,8 @@ Examples:
     # Optional arguments
     parser.add_argument(
         '--instance',
-        default='ml.g4dn.xlarge',
-        help='SageMaker instance type (default: ml.g4dn.xlarge, $0.736/hr)'
+        default='ml.g4dn.2xlarge',
+        help='SageMaker instance type (default: ml.g4dn.2xlarge, T4 16GB GPU, $0.94/hr)'
     )
     parser.add_argument(
         '--model',
@@ -267,14 +274,20 @@ Examples:
         help='Batch size (default: 8)'
     )
     parser.add_argument(
-        '--no-spot',
+        '--spot',
         action='store_true',
-        help='Disable spot instances (more expensive but guaranteed)'
+        help='Enable spot instances (70%% cheaper but may be interrupted - requires quota)'
     )
     parser.add_argument(
         '--wait',
         action='store_true',
         help='Wait for training to complete (will stream logs)'
+    )
+    parser.add_argument(
+        '--role',
+        type=str,
+        default=None,
+        help='IAM role ARN for SageMaker execution (e.g., arn:aws:iam::123456789012:role/SageMakerExecutionRole)'
     )
 
     args = parser.parse_args()
@@ -287,8 +300,9 @@ Examples:
         model_size=args.model,
         epochs=args.epochs,
         batch_size=args.batch_size,
-        use_spot=not args.no_spot,
-        wait=args.wait
+        use_spot=args.spot,
+        wait=args.wait,
+        role_arn=args.role
     )
 
     if not args.wait:

@@ -88,17 +88,22 @@ def train():
     with open(dataset_yaml, 'r') as f:
         data_config = yaml.safe_load(f)
 
-    # Update paths to be relative to data_dir
-    data_config['path'] = str(Path(args.data_dir) / 'yolo_dataset')
-    data_config['train'] = 'images/train'
-    data_config['val'] = 'images/val'
+    # Update paths to be ABSOLUTE for SageMaker
+    base_path = Path(args.data_dir) / 'yolo_dataset'
+    data_config['path'] = str(base_path.absolute())
+    data_config['train'] = str((base_path / 'images' / 'train').absolute())
+    data_config['val'] = str((base_path / 'images' / 'val').absolute())
 
     # Save updated config
     updated_yaml = Path(args.data_dir) / 'dataset_sagemaker.yaml'
     with open(updated_yaml, 'w') as f:
         yaml.dump(data_config, f)
 
-    print(f"Updated dataset config saved to: {updated_yaml}\n")
+    print(f"Updated dataset config saved to: {updated_yaml}")
+    print(f"Dataset paths:")
+    print(f"  path: {data_config['path']}")
+    print(f"  train: {data_config['train']}")
+    print(f"  val: {data_config['val']}\n")
 
     # Initialize model
     model_name = f'yolov8{args.model}-seg.pt'
