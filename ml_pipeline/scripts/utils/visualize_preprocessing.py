@@ -155,7 +155,7 @@ class PreprocessingVisualizer:
             original_shape = img.shape[:2]
 
             # Apply LetterBox (YOLO's resize with padding)
-            letterbox = LetterBox(new_shape=(self.img_size, self.img_size), auto=False, scaleFill=False)
+            letterbox = LetterBox(new_shape=(self.img_size, self.img_size), auto=False, scale_fill=False)
             img_processed = letterbox(image=img)
 
             # Create side-by-side comparison
