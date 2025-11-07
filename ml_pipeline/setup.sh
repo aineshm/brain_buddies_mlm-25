@@ -47,11 +47,11 @@ pip install -r requirements.txt
 # Verify key packages
 echo ""
 echo "  Verifying installations:"
-python -c "import torch; print(f'    ✓ PyTorch {torch.__version__}')"
-python -c "import torch; print(f'    ✓ CUDA available: {torch.cuda.is_available()}')"
-python -c "from ultralytics import YOLO; print('    ✓ Ultralytics YOLOv8')"
-python -c "import mlflow; print(f'    ✓ MLflow {mlflow.__version__}')"
-python -c "import cv2; print(f'    ✓ OpenCV {cv2.__version__}')"
+python3 -c "import torch; print(f'    ✓ PyTorch {torch.__version__}')"
+python3 -c "import torch; print(f'    ✓ CUDA available: {torch.cuda.is_available()}')"
+python3 -c "from ultralytics import YOLO; print('    ✓ Ultralytics YOLOv8')"
+python3 -c "import mlflow; print(f'    ✓ MLflow {mlflow.__version__}')"
+python3 -c "import cv2; print(f'    ✓ OpenCV {cv2.__version__}')"
 echo ""
 
 # Create directory structure (if not exists)
@@ -65,8 +65,8 @@ echo ""
 
 # Download YOLOv8 pretrained weights
 echo "[6/6] Downloading YOLOv8 pretrained weights..."
-python -c "from ultralytics import YOLO; YOLO('yolov8n-seg.pt')" > /dev/null 2>&1
-python -c "from ultralytics import YOLO; YOLO('yolov8s-seg.pt')" > /dev/null 2>&1
+python3 -c "from ultralytics import YOLO; YOLO('yolov8n-seg.pt')" > /dev/null 2>&1
+python3 -c "from ultralytics import YOLO; YOLO('yolov8s-seg.pt')" > /dev/null 2>&1
 echo "  ✓ Pretrained weights downloaded"
 echo ""
 

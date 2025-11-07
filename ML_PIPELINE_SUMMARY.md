@@ -154,7 +154,7 @@ We have implemented a **complete deep learning pipeline** that replaces the prev
 
 ```bash
 cd scripts/data_prep
-python convert_all_annotations.py \
+python3 convert_all_annotations.py \
     --data-dir /Users/aineshmohan/Documents/mlm \
     --output-dir ../../data/processed/yolo_dataset
 ```
@@ -173,7 +173,7 @@ python convert_all_annotations.py \
 
 ```bash
 cd scripts/training
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model s \
     --epochs 150 \
@@ -191,7 +191,7 @@ python train_yolo_segmentation.py \
 
 ```bash
 cd scripts/inference
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/*/weights/best.pt \
     --input /path/to/sequence.tif \
     --output ../../results/analysis

@@ -70,7 +70,7 @@ if [ ! -d "data/processed/yolo_dataset" ]; then
     echo "  Converting annotations..."
 
     cd scripts/data_prep
-    python convert_all_annotations.py \
+    python3 convert_all_annotations.py \
         --data-dir "$DATA_DIR" \
         --output-dir ../../data/processed/yolo_dataset
     cd ../..
@@ -120,7 +120,7 @@ echo ""
 echo "Next steps:"
 echo ""
 echo "1. Launch training:"
-echo "   python launch_sagemaker.py \\"
+echo "   python3 launch_sagemaker.py \\"
 echo "       --data-s3 s3://$BUCKET/mlm-data/ \\"
 echo "       --output-s3 s3://$BUCKET/sagemaker-output/ \\"
 echo "       --model s \\"

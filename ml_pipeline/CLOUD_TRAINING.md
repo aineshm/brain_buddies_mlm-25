@@ -414,7 +414,7 @@ cd ml_pipeline
 
 # Convert annotations (if not done)
 cd scripts/data_prep
-python convert_all_annotations.py \
+python3 convert_all_annotations.py \
     --data-dir /Users/aineshmohan/Documents/mlm \
     --output-dir ../../data/processed/yolo_dataset
 
@@ -448,7 +448,7 @@ aws s3 cp ../ml_pipeline.tar.gz s3://$BUCKET/code/
 ```bash
 cd ml_pipeline
 
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 s3://$BUCKET/mlm-data/ \
     --output-s3 s3://$BUCKET/sagemaker-output/ \
     --instance ml.g4dn.xlarge \
@@ -597,7 +597,7 @@ BUCKET="your-bucket"
 aws s3 sync data/processed/yolo_dataset s3://$BUCKET/mlm-data/yolo_dataset/
 
 # 3. Launch
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 s3://$BUCKET/mlm-data/ \
     --output-s3 s3://$BUCKET/output/ \
     --instance ml.g4dn.xlarge \

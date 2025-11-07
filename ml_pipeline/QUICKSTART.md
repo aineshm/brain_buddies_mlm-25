@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```bash
 cd scripts/data_prep
 
-python convert_all_annotations.py \
+python3 convert_all_annotations.py \
     --data-dir /Users/aineshmohan/Documents/mlm \
     --output-dir ../../data/processed/yolo_dataset
 
@@ -34,7 +34,7 @@ python convert_all_annotations.py \
 cd ../training
 
 # Quick training (for testing)
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model n \
     --epochs 50 \
@@ -42,7 +42,7 @@ python train_yolo_segmentation.py \
     --device 0
 
 # Production training (better results)
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model s \
     --epochs 150 \
@@ -57,7 +57,7 @@ python train_yolo_segmentation.py \
 ```bash
 cd ../inference
 
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/*/weights/best.pt \
     --input /Users/aineshmohan/Documents/mlm/Annotated\ Data/training.tif \
     --output ../../results/analysis_training \
@@ -121,7 +121,7 @@ print("✓ Cell characterization: Available from masks")
 ```bash
 cd scripts/training
 
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --validate-only \
     --weights ../../results/candida_segmentation/*/weights/best.pt
@@ -133,13 +133,13 @@ python train_yolo_segmentation.py \
 cd scripts/inference
 
 # MattLines27 (validation set)
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/*/weights/best.pt \
     --input /Users/aineshmohan/Documents/mlm/Annotated\ Data/MattLines27.tif \
     --output ../../results/analysis_MattLines27
 
 # MattLines9 (test set - no annotations)
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/*/weights/best.pt \
     --input /Users/aineshmohan/Documents/mlm/Annotated\ Data/MattLines9.tif \
     --output ../../results/analysis_MattLines9
@@ -149,14 +149,14 @@ python inference_pipeline.py \
 
 ```bash
 # Higher confidence = fewer detections (more precise)
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ... \
     --input ... \
     --output ... \
     --conf 0.5
 
 # Lower confidence = more detections (higher recall)
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ... \
     --input ... \
     --output ... \
@@ -211,10 +211,10 @@ pip install -r requirements.txt --upgrade
 
 ```bash
 # Reduce batch size
-python train_yolo_segmentation.py --batch-size 4
+python3 train_yolo_segmentation.py --batch-size 4
 
 # Or use CPU (slow!)
-python train_yolo_segmentation.py --device cpu
+python3 train_yolo_segmentation.py --device cpu
 ```
 
 ### Issue: Model Not Found
@@ -224,7 +224,7 @@ python train_yolo_segmentation.py --device cpu
 find results/ -name "best.pt"
 
 # Use full path
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model /full/path/to/best.pt \
     ...
 ```
@@ -233,10 +233,10 @@ python inference_pipeline.py \
 
 ```bash
 # Lower confidence threshold
-python inference_pipeline.py --conf 0.1
+python3 inference_pipeline.py --conf 0.1
 
 # Check if model trained properly
-python train_yolo_segmentation.py --validate-only --weights ...
+python3 train_yolo_segmentation.py --validate-only --weights ...
 ```
 
 ---

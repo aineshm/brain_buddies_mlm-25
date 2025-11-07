@@ -73,10 +73,10 @@ pip install -r requirements.txt
 
 ```bash
 # Check PyTorch CUDA
-python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA: {torch.cuda.is_available()}')"
+python3 -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA: {torch.cuda.is_available()}')"
 
 # Check Ultralytics
-python -c "from ultralytics import YOLO; print('YOLOv8 ready')"
+python3 -c "from ultralytics import YOLO; print('YOLOv8 ready')"
 ```
 
 ---
@@ -91,7 +91,7 @@ Convert CVAT XML annotations to YOLO format:
 cd scripts/data_prep
 
 # Convert all datasets
-python convert_all_annotations.py \
+python3 convert_all_annotations.py \
     --data-dir /Users/aineshmohan/Documents/mlm \
     --output-dir ../../data/processed/yolo_dataset
 ```
@@ -114,7 +114,7 @@ data/processed/yolo_dataset/
 cd scripts/training
 
 # Train YOLOv8n (nano - fastest)
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model n \
     --img-size 640 \
@@ -123,7 +123,7 @@ python train_yolo_segmentation.py \
     --device 0
 
 # For better accuracy, use YOLOv8s or YOLOv8m
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model s \
     --img-size 640 \
@@ -147,7 +147,7 @@ Analyze a time-series TIFF file:
 ```bash
 cd scripts/inference
 
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/exp1/weights/best.pt \
     --input /Users/aineshmohan/Documents/mlm/Annotated\ Data/training.tif \
     --output ../../results/analysis_training \
@@ -324,10 +324,10 @@ All available in `results.json`:
 
 ```bash
 # Reduce batch size
-python train_yolo_segmentation.py --batch-size 4
+python3 train_yolo_segmentation.py --batch-size 4
 
 # Reduce image size
-python train_yolo_segmentation.py --img-size 512
+python3 train_yolo_segmentation.py --img-size 512
 ```
 
 ### Low Validation Performance

@@ -58,7 +58,7 @@ source venv/bin/activate
 ### Convert Data (10 min)
 ```bash
 cd scripts/data_prep
-python convert_all_annotations.py \
+python3 convert_all_annotations.py \
     --data-dir /Users/aineshmohan/Documents/mlm \
     --output-dir ../../data/processed/yolo_dataset
 ```
@@ -66,7 +66,7 @@ python convert_all_annotations.py \
 ### Train (10-20 hours)
 ```bash
 cd ../training
-python train_yolo_segmentation.py \
+python3 train_yolo_segmentation.py \
     --data ../../data/processed/yolo_dataset/dataset.yaml \
     --model s --epochs 150 --batch-size 8 --device 0
 ```
@@ -74,7 +74,7 @@ python train_yolo_segmentation.py \
 ### Analyze (5 min)
 ```bash
 cd ../inference
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../results/candida_segmentation/*/weights/best.pt \
     --input /path/to/sample.tif \
     --output ../../results/analysis

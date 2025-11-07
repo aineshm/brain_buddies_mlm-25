@@ -15,7 +15,7 @@ aws configure
 ./upload_to_s3.sh my-bucket-name
 
 # 3. Launch training
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 s3://my-bucket-name/mlm-data/ \
     --output-s3 s3://my-bucket-name/output/ \
     --model s \
@@ -74,14 +74,14 @@ cd ml_pipeline
 
 ```bash
 # Basic launch (recommended)
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 s3://my-bucket-name/mlm-data/ \
     --output-s3 s3://my-bucket-name/output/ \
     --model s \
     --epochs 150
 
 # Or with custom settings
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 s3://my-bucket-name/mlm-data/ \
     --output-s3 s3://my-bucket-name/output/ \
     --instance ml.g4dn.2xlarge \
@@ -149,7 +149,7 @@ ls -lh best.pt
 ```bash
 cd ../scripts/inference
 
-python inference_pipeline.py \
+python3 inference_pipeline.py \
     --model ../../trained_models/best.pt \
     --input /path/to/sample.tif \
     --output ../../results/analysis
@@ -222,7 +222,7 @@ aws logs tail /aws/sagemaker/TrainingJobs/$JOB_NAME
 
 ```bash
 # Use smaller batch size
-python launch_sagemaker.py \
+python3 launch_sagemaker.py \
     --data-s3 ... \
     --output-s3 ... \
     --batch-size 4  # Reduced from 8
