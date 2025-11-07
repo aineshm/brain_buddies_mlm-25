@@ -83,16 +83,17 @@ def train():
 
     print(f"Found dataset YAML: {dataset_yaml}\n")
 
-    # Update dataset YAML paths to be absolute for SageMaker
+    # Update dataset YAML paths for SageMaker
     import yaml
     with open(dataset_yaml, 'r') as f:
         data_config = yaml.safe_load(f)
 
-    # Update paths to be ABSOLUTE for SageMaker
+    # Set base path as absolute, keep train/val as relative
+    # YOLO expects: path (absolute) + train (relative) + val (relative)
     base_path = Path(args.data_dir) / 'yolo_dataset'
     data_config['path'] = str(base_path.absolute())
-    data_config['train'] = str((base_path / 'images' / 'train').absolute())
-    data_config['val'] = str((base_path / 'images' / 'val').absolute())
+    data_config['train'] = 'images/train'  # Relative to path
+    data_config['val'] = 'images/val'      # Relative to path
 
     # Save updated config
     updated_yaml = Path(args.data_dir) / 'dataset_sagemaker.yaml'
@@ -101,9 +102,24 @@ def train():
 
     print(f"Updated dataset config saved to: {updated_yaml}")
     print(f"Dataset paths:")
-    print(f"  path: {data_config['path']}")
-    print(f"  train: {data_config['train']}")
-    print(f"  val: {data_config['val']}\n")
+    print(f"  path (absolute): {data_config['path']}")
+    print(f"  train (relative): {data_config['train']}")
+    print(f"  val (relative): {data_config['val']}")
+
+    # Verify the full paths exist
+    train_path = base_path / data_config['train']
+    val_path = base_path / data_config['val']
+    print(f"\nVerifying paths exist:")
+    print(f"  Training: {train_path} -> {'EXISTS' if train_path.exists() else 'MISSING'}")
+    print(f"  Validation: {val_path} -> {'EXISTS' if val_path.exists() else 'MISSING'}")
+
+    if train_path.exists():
+        train_images = list(train_path.glob('*.tif'))
+        print(f"  Found {len(train_images)} training images")
+    if val_path.exists():
+        val_images = list(val_path.glob('*.tif'))
+        print(f"  Found {len(val_images)} validation images")
+    print()
 
     # Initialize model
     model_name = f'yolov8{args.model}-seg.pt'
