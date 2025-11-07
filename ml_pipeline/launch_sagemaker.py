@@ -149,7 +149,7 @@ def launch_training(
         output_path=output_s3_path,
         code_location=output_s3_path,
         max_run=max_run,
-        keep_alive_period_in_seconds=1800,  # Keep warm for 30 min
+        # keep_alive_period_in_seconds=1800,  # Disabled to avoid warm pool quota limits
         volume_size=50,  # GB
         checkpoint_s3_uri=output_s3_path + '/checkpoints',
         use_spot_instances=use_spot,
