@@ -258,14 +258,31 @@ def main():
         frames_output = temp_dir / dataset['name'] / 'frames'
         num_frames = extract_tiff_frames(tif_path, frames_output, dataset['name'])
 
-        # 4. Copy to final structure
+        # 4. Copy to final structure (convert images to RGB 8-bit for YOLO)
+        import cv2
+        import numpy as np
+
         split = dataset['split']
         for frame_num in frame_counts.keys():
-            # Copy image
+            # Convert and save image (grayscale 16-bit → RGB 8-bit)
             src_img = frames_output / f"{dataset['name']}_frame_{frame_num:04d}.tif"
             dst_img = output_dir / 'images' / split / f"{dataset['name']}_frame_{frame_num:04d}.tif"
             if src_img.exists():
-                shutil.copy(src_img, dst_img)
+                # Read image (preserves 16-bit if present)
+                img = cv2.imread(str(src_img), cv2.IMREAD_UNCHANGED)
+
+                # Convert 16-bit to 8-bit if needed
+                if img.dtype == np.uint16:
+                    img = (img / 256).astype(np.uint8)
+
+                # Convert grayscale to RGB (YOLO requires 3 channels)
+                if len(img.shape) == 2:
+                    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+                elif img.shape[2] == 1:
+                    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+
+                # Save as 8-bit RGB TIFF
+                cv2.imwrite(str(dst_img), img)
 
             # Copy label
             src_label = labels_output / f"{dataset['name']}_frame_{frame_num:04d}.txt"
