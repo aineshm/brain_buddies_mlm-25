@@ -1,0 +1,49 @@
+# WandB Disabled
+
+This pipeline uses **MLflow** for experiment tracking, not WandB.
+
+## Why WandB is Disabled
+
+Ultralytics YOLO has built-in WandB integration that tries to initialize automatically during training. This causes conflicts because:
+
+1. WandB tries to use the file path as a project name (invalid)
+2. We want to use MLflow for consistency
+3. WandB requires account login
+
+## How WandB is Disabled
+
+In `src/training/train_baseline.py`, we set environment variables:
+
+```python
+os.environ['WANDB_DISABLED'] = 'true'
+os.environ['WANDB_MODE'] = 'disabled'
+```
+
+This tells Ultralytics to skip WandB initialization entirely.
+
+## Using MLflow Instead
+
+All experiment tracking is done through MLflow:
+
+```bash
+# View experiments
+mlflow ui --backend-store-uri ~/mlm_outputs/alt_pipeline_1/experiments/mlflow
+
+# Open browser to http://localhost:5000
+```
+
+MLflow provides:
+- ✅ Local storage (no cloud account needed)
+- ✅ All metrics, parameters, and models tracked
+- ✅ Web UI for visualization
+- ✅ Model versioning and artifact storage
+
+## If You Want to Use WandB
+
+If you prefer WandB:
+
+1. Remove the environment variable lines from `train_baseline.py`
+2. Login: `wandb login`
+3. Update config.yaml: `tracking_backend: "wandb"`
+
+But MLflow is recommended for this pipeline.

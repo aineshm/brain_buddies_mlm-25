@@ -1,0 +1,179 @@
+# Alt ML Pipeline 1 - Master Configuration
+
+# Project paths
+project:
+  name: "alt_ml_pipeline_1"
+  root_dir: "/Users/aineshmohan/Library/Mobile Documents/com~apple~CloudDocs/College/MLM 25/brain_buddies_mlm-25"
+  output_dir: "${HOME}/mlm_outputs/alt_pipeline_1"
+
+# Data configuration
+data:
+  # Source data
+  existing_yolo_dataset: "ml_pipeline/data/processed/yolo_dataset"
+  n_real_frames: 205
+  n_sequences: 5
+  frames_per_sequence: 41
+
+  # Morphology classes
+  classes:
+    - "planktonic"          # 35.4%
+    - "single_dispersed"    # 19.9%
+    - "hyphae"             # 17.5%
+    - "clump_dispersed"    # 13.1%
+    - "yeast"              # 9.4%
+    - "biofilm"            # 2.5%
+    - "pseudohyphae"       # 2.1%
+
+  num_classes: 7
+
+  # Data splits
+  split_strategy: "leave_one_sequence_out"  # 5-fold CV
+  val_size: 0.15
+
+  # Synthetic data generation
+  synthetic:
+    enabled: true
+    target_frames: 10000
+    min_cells_per_frame: 20
+    max_cells_per_frame: 200
+
+# Training configuration
+training:
+  # Baseline model
+  baseline:
+    model: "yolov8n-seg.pt"  # Nano for speed
+    epochs: 100
+    batch_size: 8
+    image_size: 640
+    patience: 20
+
+  # Self-supervised learning
+  ssl:
+    enabled: true
+    epochs: 100
+    batch_size: 16
+    pretext_tasks:
+      - "frame_ordering"
+      - "rotation_prediction"
+      - "contrastive_learning"
+
+  # Main detection training
+  detection:
+    model: "yolov8s-seg.pt"  # Small for balance
+    epochs: 200
+    batch_size: 8
+    image_size: 640
+    patience: 30
+    use_ssl_init: true
+
+  # Ensemble training
+  ensemble:
+    enabled: true
+    n_models: 10
+    architectures:
+      - "yolov8n-seg"
+      - "yolov8s-seg"
+      - "yolov8m-seg"
+    different_augmentations: true
+    different_seeds: true
+    snapshot_ensemble: true
+
+  # Optimizer
+  optimizer:
+    name: "AdamW"
+    lr: 0.001
+    weight_decay: 0.0005
+
+  # Learning rate schedule
+  scheduler:
+    name: "cosine"
+    warmup_epochs: 5
+
+# Augmentation configuration
+augmentation:
+  # Spatial augmentations
+  spatial:
+    rotation: 360
+    scale_range: [0.8, 1.2]
+    flip_horizontal: 0.5
+    flip_vertical: 0.5
+    elastic_transform: true
+
+  # Intensity augmentations
+  intensity:
+    brightness: 0.2
+    contrast: 0.2
+    gamma_range: [0.8, 1.2]
+
+  # Microscopy-specific
+  microscopy:
+    defocus_blur: true
+    uneven_illumination: true
+    phase_contrast_artifacts: true
+
+  # Temporal (for SSL)
+  temporal:
+    frame_interpolation: true
+    speed_variation: [0.5, 2.0]
+
+# Biological constraints
+biological:
+  min_cell_diameter_um: 3
+  max_cell_diameter_um: 20
+  min_cell_area_px: 10
+  max_cell_area_px: 500
+  max_growth_rate_per_hour: 1.5
+  max_overlap_ratio: 0.2
+
+# Test-time augmentation
+tta:
+  enabled: true
+  n_augmentations: 30
+  strategies:
+    - "multi_scale"
+    - "rotation"
+    - "flip"
+    - "intensity"
+
+# Evaluation
+evaluation:
+  metrics:
+    - "f1"
+    - "precision"
+    - "recall"
+    - "mAP50"
+    - "mAP50-95"
+  per_class_metrics: true
+  confidence_threshold: 0.25
+  iou_threshold: 0.5
+
+# Visualization
+visualization:
+  save_interval: 10  # Save every N epochs
+  n_samples: 16      # Number of samples per visualization
+  show_ground_truth: true
+  show_confidence: true
+  show_class_labels: true
+
+# Experiment tracking
+experiment:
+  tracking_backend: "mlflow"  # Using MLflow (WandB is disabled in training scripts)
+  experiment_name: "alt_pipeline_1"
+  log_interval: 1  # Log every epoch
+  save_top_k: 3    # Keep top 3 models
+  # Note: WandB is disabled via environment variables to avoid conflicts
+
+# Hardware
+hardware:
+  device: "auto"  # auto, cuda, mps, cpu
+  num_workers: 4
+  use_amp: true  # Automatic mixed precision
+
+# SageMaker (optional)
+sagemaker:
+  enabled: false
+  instance_type: "ml.g4dn.2xlarge"
+  volume_size: 50
+  max_run_time: 72000  # 20 hours
+  use_spot_instances: true
+  spot_max_wait: 86400
